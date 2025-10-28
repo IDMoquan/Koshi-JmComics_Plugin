@@ -69,3 +69,8 @@ plugins:
     $if: env.NODE_ENV === 'development'
     hmr:klr3uu:
       root: .
+  adapter-onebot:mc97a7:
+    selfId: '1695428014'
+  jmcomic:0eapvr: {}
+prefix:
+  - /

@@ -1,0 +1,39 @@
+client:
+  cache: null
+  domain: []
+  impl: api
+  postman:
+    meta_data:
+      headers: null
+      impersonate: chrome
+      proxies:
+        http: 127.0.0.1:7890
+        https: 127.0.0.1:7890
+    type: curl_cffi
+  retry_times: 3
+dir_rule:
+  base_dir: downloads
+  rule: Bd_Pname
+download:
+  cache: true
+  image:
+    decode: true
+    suffix: null
+  threading:
+    image: 30
+    photo: 16
+log: true
+plugins:
+  valid: log
+  before_album:
+    - plugin: download_cover
+      kwargs:
+        dir_rule: 
+          base_dir: downloads\cover
+          rule: '{Aid}.jpg'
+  after_album:
+    - plugin: img2pdf
+      kwargs:
+        pdf_dir: downloads\pdf
+        filename_rule: Aid
+version: '2.1'

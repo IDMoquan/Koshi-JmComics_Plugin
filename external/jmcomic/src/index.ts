@@ -15,9 +15,10 @@ export function apply(ctx: Context) {
     const {exec} = require('child_process');
     const fs = require('fs');
     await session.send(`${h('at', {id: session.userId})} 正在下载#${number}，请稍等片刻...`);
-    await exec(`python external/jmcomic/src/main.py ${number}`, (error) => {
+    await exec(`python external/jmcomic/src/main.py ${number}`, (error,stdout) => {
       if (error) {
-        session.send('python调用错误');
+        session.send('下载失败');
+        session.send(stdout);
         return;
       }
       const filePath = `downloads/pdf/${number}.pdf`;

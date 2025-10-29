@@ -1,6 +1,5 @@
 {
   "name": "koishi-plugin-jmcomic",
-  "description": "Koshi plugin to fetch comics from jmcomic",
   "contributors": [
     "FOLINK <bzh16023@163.com>"
   ],
@@ -11,7 +10,18 @@
     "lib",
     "dist"
   ],
-  "license": "GPL-3.0-only",
+  "koishi": {
+    "description": {
+      "en": "Koshi plugin to fetch comics from jmcomic",
+      "zh": "Koishi 插件，从 jmcomic 获取漫画"
+    },
+    "service": {
+      "required": ["commands"],
+      "optional": ["assets"],
+      "implements": ["jmcomic"]
+    }
+  },
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IDMoquan/Koshi-JmComics_Plugin.git"

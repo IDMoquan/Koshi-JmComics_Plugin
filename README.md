@@ -15,7 +15,7 @@ pip install jmcomic -i https://pypi.org/project -U
 ```
 ### 启动Koishi服务
 ```
-npm run start
+npm run dev
 ```
 ### 群聊指令使用
 ```

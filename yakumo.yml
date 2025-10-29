@@ -1,4 +1,5 @@
-- name: yakumo
+- id: pyrfry
+  name: yakumo
   config:
     pipeline:
       build:
@@ -7,6 +8,11 @@
         - client
       clean:
         - tsc --clean
-- name: yakumo-esbuild
-- name: yakumo-tsc
-- name: '@koishijs/client/lib'
+- id: txibca
+  name: yakumo-esbuild
+- id: 9qljif
+  name: yakumo-tsc
+- id: m8ldv2
+  name: '@koishijs/client/lib'
+- id: lqqcsk
+  name: yakumo/run

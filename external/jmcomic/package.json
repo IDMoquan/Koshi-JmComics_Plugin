@@ -4,7 +4,7 @@
   "contributors": [
     "FOLINK <bzh16023@163.com>"
   ],
-  "version": "0.0.1",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [

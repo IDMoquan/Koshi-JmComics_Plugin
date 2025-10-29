@@ -16,3 +16,5 @@
   name: '@koishijs/client/lib'
 - id: lqqcsk
   name: yakumo/run
+- id: 2siysq
+  name: yakumo/publish

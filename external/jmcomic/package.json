@@ -3,12 +3,14 @@
   "contributors": [
     "FOLINK <bzh16023@163.com>"
   ],
-  "version": "0.1.1",
+  "version": "0.2.0-alpha",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
-    "dist"
+    "dist",
+    "src/main.py",
+    "src/option.yml"
   ],
   "koishi": {
     "description": {

@@ -11,9 +11,11 @@ export const Config: Schema<Config> = Schema.object({})
 export function apply(ctx: Context) {
   ctx.command('jm <number>')
   .action(async(bot, number) => {
+    var path = require("path");
     const session = bot.session;
     const {exec} = require('child_process');
     const fs = require('fs');
+    await session.send(path.resolve('./'));
     await session.send(`${h('at', {id: session.userId})} 正在下载#${number}，请稍等片刻...`);
     await exec(`python external/jmcomic/src/main.py ${number}`, (error,stdout) => {
       if (error) {

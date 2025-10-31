@@ -18,6 +18,7 @@ export function apply(ctx: Context) {
     await session.send(path.resolve(__dirname));
     await session.send(`${h('at', {id: session.userId})} 正在下载#${number}，请稍等片刻...`);
     await exec(`python ${path.resolve(__dirname)}/../src/main.py ${number}`, (error,stdout) => {
+      session.send("python end");
       if (error) {
         session.send('下载失败');
         session.send(stdout);

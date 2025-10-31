@@ -15,9 +15,9 @@ export function apply(ctx: Context) {
     const session = bot.session;
     const {exec} = require('child_process');
     const fs = require('fs');
-    await session.send(path.resolve('./'));
+    await session.send(path.resolve(__dirname));
     await session.send(`${h('at', {id: session.userId})} 正在下载#${number}，请稍等片刻...`);
-    await exec(`python external/jmcomic/src/main.py ${number}`, (error,stdout) => {
+    await exec(`python ${path.resolve(__dirname)}/../src/main.py ${number}`, (error,stdout) => {
       if (error) {
         session.send('下载失败');
         session.send(stdout);

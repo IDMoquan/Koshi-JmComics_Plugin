@@ -27,11 +27,11 @@ plugins:
     - plugin: download_cover
       kwargs:
         dir_rule: 
-          base_dir: downloads\cover
+          base_dir: downloads/cover
           rule: '{Aid}.jpg'
   after_album:
     - plugin: img2pdf
       kwargs:
-        pdf_dir: downloads\pdf
+        pdf_dir: downloads/pdf
         filename_rule: Aid
 version: '2.1'

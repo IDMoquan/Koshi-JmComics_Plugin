@@ -28,8 +28,8 @@ export function apply(ctx: Context) {
       const pdf_dir = 'downloads/pdf';
       const img_dir = 'downloads/cover';
       if(fs.existsSync(filePath)){
-        session.send(`${h('at', {id: session.userId})} #jm-${number}\n下载完成，正在发送...\n Cover:${h.image(pathToFileURL(resolve(img_dir, `${number}.jpg`)).href)}`);
-        session.send(h.file(pathToFileURL(resolve(pdf_dir, `${number}.pdf`)).href));
+        session.send(`${h('at', {id: session.userId})} #jm-${number}\n下载完成，正在发送...\n Cover:${h.image(`${img_dir}/${number}.jpg`)}`);
+        session.send(h.file(`${pdf_dir}/${number}.pdf`));
         return 'success';
       }
       else{
